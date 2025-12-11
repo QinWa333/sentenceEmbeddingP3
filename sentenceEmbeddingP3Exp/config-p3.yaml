@@ -1,0 +1,21 @@
+# config.yaml
+# support multiple models and configurations
+
+# default config name
+default_config: llama-2-7b-p3
+
+# GPU config
+gpu_config:
+  cuda_visible_devices: "0,1"
+
+# model config list
+# Add new models here
+models:
+  llama-2-7b-p3:
+    model_name_or_path: /dev/shm/zzp_data/model/Llama-2-7b-hf
+    num_placeholders: 25
+    output_layer: 27 #27? -1？
+    batch_size: 16
+    mode: test
+    task_set: sts
+
